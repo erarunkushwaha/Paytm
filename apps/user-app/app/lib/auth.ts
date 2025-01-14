@@ -33,6 +33,7 @@ export const authOptions = {
             }
 
             try {
+
                 const user = await db.user.create({
                     data: {
                         number: credentials.phone,
@@ -48,6 +49,8 @@ export const authOptions = {
             } catch(e) {
                 console.error(e);
             }
+
+
 
             return null
           },
